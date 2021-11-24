@@ -26,7 +26,7 @@ private WebDriver driver;
 
         driver.get("https://www.google.com");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.switchTo().frame(0); // to sama ogarnęłam
+        driver.switchTo().frame(0); 
         driver.findElement(By.xpath("//*[@id=\"introAgreeButton\"]/span/span")).click();
 
         WebElement searchInput = driver.findElement(By.name("q"));
