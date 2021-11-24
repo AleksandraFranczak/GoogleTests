@@ -33,7 +33,7 @@ private WebDriver driver;
         searchInput.sendKeys("seleniumhq.org");
         searchInput.sendKeys(Keys.ENTER);
         driver.findElement(By.xpath("/html/body/div[7]/div[2]/div[10]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div[1]/a")).click();
-        Assert.assertEquals(driver.getTitle(),"SeleniumHQ Browser AutomationOLA", "Expected title is different than the acutal one");
+        Assert.assertEquals(driver.getTitle(),"SeleniumHQ Browser AutomationOLA", "Expected title is different than the actual one");
     }
     @AfterClass
     public void tearDown() {
