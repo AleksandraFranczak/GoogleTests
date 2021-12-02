@@ -16,10 +16,7 @@ public class GoogleSearchTest extends BaseSeleniumTest{
         driver.get("https://www.google.com");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.switchTo().frame(0); 
-        
-        By agreeButtonXpath=By.xpath("//*[@id=\"introAgreeButton\"]/span/span");
-        WebElement agreeButton=driver.findElement(agreeButtonXpath);
-        agreeButton.click();
+        driver.findElement(By.xpath("//*[@id=\"introAgreeButton\"]/span/span")).click(); 
 
         WebElement searchInput = driver.findElement(By.name("q"));
         searchInput.sendKeys("seleniumhq.org");
