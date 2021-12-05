@@ -4,8 +4,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public abstract class BaseSeleniumTest {
-//Lekcja.162
-protected WebDriver driver;  //modyfikator dostępu ,protected' żeby klasy dziedziczące miały dostęp
+
+protected WebDriver driver;  
     @BeforeTest
     public void setUp(){
         System.out.println("Before test");
