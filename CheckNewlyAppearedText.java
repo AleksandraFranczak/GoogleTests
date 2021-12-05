@@ -25,11 +25,9 @@ public class CheckNewlyAppearedText {
         WebElement newParagraph=driver.findElement(By.cssSelector("p"));
         newParagraph.getText();
 
-        SoftAssert softAssert=new SoftAssert(); //stosuję miękką asercję
+        SoftAssert softAssert=new SoftAssert(); 
 
-        softAssert.assertEquals(newParagraph.getText(),"Dopiero się pojawiłem hehehehehhe!","Teksty są różne"); //fałszywa asercja
+        softAssert.assertEquals(newParagraph.getText(),"Dopiero się pojawiłem!","Expected and actual texts are diffferent");
         softAssert.assertFalse(newParagraph.getText().isEmpty());
-        softAssert.assertTrue(newParagraph.getText().startsWith("Dopiero"));
-        // driver.quit();
         softAssert.assertAll();}
 }
