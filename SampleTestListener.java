@@ -33,7 +33,6 @@ public class SampleTestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult arg0) {
         WebDriver driver=DriverFactory.getDriver();
-        //Nadaję randomowe imie screenowi
         int randomName=(int) (Math.random()*1000);
         String fileName="ScreenshotFailedTest"+randomName+".png";
 
